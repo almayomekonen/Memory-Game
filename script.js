@@ -48,9 +48,12 @@ function check() {
         first.classList.add("hidden");
         last.classList.add("hidden");
 
+        const audio = new Audio("win.wav"); // Or use `document.createElement("audio")` if preferred
+        audio.play(); // Play the audio
+
         const jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
-      }, 1500);
+      }, 700);
     } else {
       setTimeout(() => {
         first.classList.remove("showing");
