@@ -1,28 +1,37 @@
+/* General Styles */
 body {
   background: #333;
   margin: 0;
   font-family: Arial, sans-serif;
-  padding: 20px;
 }
 
 h1 {
   text-align: center;
   color: #fff;
   margin: 16px 0;
+  font-size: 32px;
 }
 
 .frame {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-right: 15px;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 6px;
+  max-width: 500px;
+  width: 100%;
   padding: 12px;
   margin: 0 auto;
   background-color: #e4e4e4;
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .board div {
@@ -58,24 +67,7 @@ h1 {
   display: initial;
 }
 
-@media (max-width: 600px) {
-  .board {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 4px;
-    padding: 8px;
-  }
-
-  .board div {
-    font-size: 25px;
-    box-shadow: inset 0px 0px 5px black;
-  }
-
-  h1 {
-    font-size: 24px;
-    margin: 8px 0;
-  }
-}
-
+/* Reset Button */
 .reset-btn {
   display: inline-block;
   margin: 16px 0;
@@ -101,6 +93,7 @@ h1 {
   transform: translateY(1px);
 }
 
+/* Footer */
 footer {
   text-align: center;
   color: #fff;
@@ -110,7 +103,24 @@ footer {
   font-size: 14px;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+
+  .board {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .board div {
+    font-size: 25px;
+    box-shadow: inset 0px 0px 5px black;
+  }
+
   .reset-btn {
     font-size: 14px;
     padding: 8px 16px;
